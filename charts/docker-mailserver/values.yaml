@@ -243,6 +243,7 @@ service:
   ## Default: Automatically assign a random IP
   # privateIp:
   ## Only relevant if the `type` above is "LoadBalancer"
+  externaltrafficpolicy: "Local"
   loadBalancer:
     ## If there is already a reserved public IP that this load balancer should use, indicate it here.
     ## Default: Automatically assign a random, ephemeral IP
