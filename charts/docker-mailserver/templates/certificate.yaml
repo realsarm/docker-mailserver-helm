@@ -12,11 +12,4 @@ spec:
   commonName: '*.{{ default "example.com" .Values.ssl.dnsname }}'
   dnsNames:
   - {{ default "example.com" .Values.ssl.dnsname }}
-  acme:
-    config:
-    - dns01:
-        provider: {{ default "cloudflare" .Values.ssl.dns01provider }}
-      domains:
-      - '*.{{ default "example.com" .Values.ssl.dnsname }}'
-      - {{ default "example.com" .Values.ssl.dnsname }}
 {{- end -}}
