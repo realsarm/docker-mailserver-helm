@@ -16,9 +16,9 @@ We list them here (and include this template in deployment.yaml) to keep deploym
 - name: ENABLE_FAIL2BAN
   value: {{ default false .Values.pod.dockermailserver.enable_fail2ban | quote }}
 - name: DOVECOT_INET_PROTOCOLS
-  value: {{ default all .Values.pod.dockermailserver.dovecot_inet_protocols | quote }}
+  value: {{ default "all" .Values.pod.dockermailserver.dovecot_inet_protocols }}
 - name: POSTFIX_INET_PROTOCOLS
-  value: {{ default all .Values.pod.dockermailserver.postfix_inet_protocols | quote }}
+  value: {{ default "all" .Values.pod.dockermailserver.postfix_inet_protocols }}
 - name: SMTP_ONLY
   value: {{ .Values.pod.dockermailserver.smtp_only | quote }}
 - name: SSL_TYPE

@@ -140,6 +140,8 @@ pod:
     ## Whether to enable fail2ban. Only makes sense if you're running services in host mode without haproxy.
     ## Default false
     enable_fail2ban: 0
+    postfix_inet_protocols: "all"
+    dovecot_inet_protocols: "all"
 
     # Whether to enable dovecot replication. Allows the syncronization of a pair of dovecot servers
     # https://wiki.dovecot.org/Replication
